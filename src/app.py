@@ -3,7 +3,7 @@ from pickle import load
 import pandas as pd
 
 app = Flask(__name__)
-model = load(open("../models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav", "wb"))
+model = load(open("../models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav", "rb"))
 
 #load the dataset
 movies_df = pd.read_csv("/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/data/processed/processed_data.csv")  # Ensure this contains a 'title' column

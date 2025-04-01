@@ -1,9 +1,10 @@
 from flask import Flask, request, render_template
-from pickle import load
 import pandas as pd
+import pickle
 
 app = Flask(__name__)
-model = load(open("../models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav", "rb"))
+with open("/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav", "rb") as f:
+    model = pickle.load(f)
 
 #load the dataset
 movies_df = pd.read_csv("/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/data/processed/processed_data.csv")  # Ensure this contains a 'title' column

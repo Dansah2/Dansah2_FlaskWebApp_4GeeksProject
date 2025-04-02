@@ -2,11 +2,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from flask import Flask, request, render_template
 import pandas as pd
 import pickle
+import os
 
 app = Flask(__name__)
 
 # Load the trained KNN model
-with open("/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav", "rb") as f:
+
+model_path = "models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav"
+
+if not os.path.exists(model_path):
+    raise FileNotFoundError(f"Model file not found: {model_path}")
+
+with open(model_path, "rb") as f:
     model = pickle.load(f)
 
 # Load the dataset

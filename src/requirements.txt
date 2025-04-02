@@ -14,3 +14,6 @@ sqlalchemy>=1.4.37
 sympy>=1.10.1
 xgboost
 gunicorn==23.0.0
+python==3.10.12
+flask==3.1.0
+werkzeug==3.1.3

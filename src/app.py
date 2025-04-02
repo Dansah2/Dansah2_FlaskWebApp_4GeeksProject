@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Load the trained KNN model
 
-model_path = "models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav"
+model_path = "/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav"
 
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file not found: {model_path}")

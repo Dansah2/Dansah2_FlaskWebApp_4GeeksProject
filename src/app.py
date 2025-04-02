@@ -41,7 +41,7 @@ def index():
                 distances, indices = model.kneighbors(matrix[movie_index])
 
                 # Get recommended movie titles (excluding the first one, which is the input movie)
-                recommendations = [(movies_df.iloc[i]["title"], distances[0][j]) for j, i in enumerate(indices[0][1:])]
+                recommendations = [movies_df.iloc[i]["title"] for i in indices[0][1:]]
         else:
             error = "Movie not found. Please try another title."
 

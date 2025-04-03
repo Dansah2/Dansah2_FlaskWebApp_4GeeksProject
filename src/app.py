@@ -8,14 +8,14 @@ app = Flask(__name__)
 
 # Load the trained KNN model
 
-model_path = "/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav"
+model_path = "../models/knn_neighbors-7_algorithm-auto_metric-cosine_leaf_size-40_radius-1.0.sav"
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file not found: {model_path}")
 with open(model_path, "rb") as f:
     model = pickle.load(f)
 
 # Load the dataset
-movies_df = pd.read_csv("/workspaces/Dansah2_FlaskWebApp_machine-learning-python-template/data/processed/processed_data.csv")  # Ensure 'title' & 'tags' exist
+movies_df = pd.read_csv("../data/processed/processed_data.csv") 
 movie_titles = movies_df["title"].tolist()
 
 # Vectorize movie tags

@@ -1,6 +1,30 @@
-# Data Science Project Boilerplate
+# 🎬 Movie Recommendation System App Using Flask
 
-This boilerplate is designed to kickstart data science projects by providing a basic setup for database connections, data processing, and machine learning model development. It includes a structured folder organization for your datasets and a set of pre-defined Python packages necessary for most data science tasks.
+In this project we build a content-based movie recommendation system using **K-Nearest Neighbors (KNN)** Then create an application using  **Flask** and deploy the application using **Render**
+
+## 🔍 Project Overview
+
+### 🎯 Objective
+
+Create and deploy a recommendation engine that predicts which movies are similar to a given one using a custom KNN algorithm and cosine similarity.
+
+### 📦 Dataset
+
+The project uses two datasets:
+- `movies.csv`: Contains metadata about each movie.
+- `credits.csv`: Contains cast and crew information.
+
+### 🔧 Tools & Technologies
+
+- Python 🐍
+- Pandas, NumPy
+- SQLAlchemy & PostgreSQL
+- Scikit-learn
+- Jupyter/VSCode Notebooks
+- CountVectorizer
+- Cosine Similarity
+- Flask
+- Render
 
 ## Structure
 
